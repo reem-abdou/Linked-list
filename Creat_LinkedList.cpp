@@ -39,20 +39,6 @@ public:
         cout << '\n';
     } 
 
-    // Creat method to check if a value is found or not
-    bool isfound(int x) { 
-        Node* temp = head; // Creat a template pointer points to the first item
-        bool F = false; // Flag to indicate if the item is found and set it = false by default
-        while (temp != NULL) { // Loop until the end of the list
-            if (temp->data == x) { 
-                F = true;   // Set flag to true if the value is found
-                break;  
-            } 
-            temp = temp->next; // Move to the next node
-        } 
-        return F; // Return flag
-    } 
-
     void insertbeforeitem(int newvalue, int item) {
         if (empty()) {
             cout << "The list is empty";
@@ -96,6 +82,20 @@ public:
             temp->next = newnode;
         }
     }
+
+    // Creat method to check if a value is found or not
+    bool isfound(int x) { 
+        Node* temp = head; // Creat a template pointer points to the first item
+        bool F = false; // Flag to indicate if the item is found and set it = false by default
+        while (temp != NULL) { // Loop until the end of the list
+            if (temp->data == x) { 
+                F = true;   // Set flag to true if the value is found
+                break;  
+            } 
+            temp = temp->next; // Move to the next node
+        } 
+        return F; // Return flag
+    } 
     
     // Method to delete an 'item' from the list
     void Delete(int item) {
