@@ -29,16 +29,6 @@ public:
         head = newnode; // Make haed points to the first item 
     } 
 
-    // Creat method to Display items in the list
-    void Display() { 
-        Node* temp = head; // Creat a template pointer points to the first item
-        while (temp != NULL) { // Loop until the end of the list
-            cout << temp->data << " "; 
-            temp = temp->next; // Move to the next node
-        } 
-        cout << '\n';
-    } 
-
     void insertbeforeitem(int newvalue, int item) {
         if (empty()) {
             cout << "The list is empty";
@@ -82,6 +72,16 @@ public:
             temp->next = newnode;
         }
     }
+
+    // Creat method to Display items in the list
+    void Display() { 
+        Node* temp = head; // Creat a template pointer points to the first item
+        while (temp != NULL) { // Loop until the end of the list
+            cout << temp->data << " "; 
+            temp = temp->next; // Move to the next node
+        } 
+        cout << '\n';
+    } 
 
     // Creat method to check if a value is found or not
     bool isfound(int x) { 
